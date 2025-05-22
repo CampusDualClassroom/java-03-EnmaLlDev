@@ -3,7 +3,11 @@ package com.campusdual.classroom;
 public class Exercise03 {
     // Cambia la ubicacion del MAIN para poder ejecutarlo desde la clase Exercise03
     public static void main(String[] args) {
-        checkUser("Sebas", "sebas01");
+        String user = "Sebas";
+        String pass = "sebas01";
+
+        checkUser(user, pass);
+
         checkUser("Sebasss", "sebas");
     }
 
@@ -25,12 +29,13 @@ public class Exercise03 {
     // TODO ↓: Tiene que comprobar si el usuario que recibe por parámetro es "Sebas" y su contraseña es "sebas01".
     //  Si es correcto, que muestre el mensaje de la función greetings() y si no que muestre el mensaje de la función error()
     public static void checkUser(String user, String pass) {
-
-        if(user.equals("Sebas") && pass.equals("sebas01")) {
+        String correctUser = "Sebas";
+        String correctPass = "sebas01";
+        if(user.equals(correctUser) && pass.equals(correctPass)) {
             System.out.println(greetings(user));
         }
         else {
-            System.out.println(error(user));
+            System.out.println(error(correctUser));
         }
     }
 }
